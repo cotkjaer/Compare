@@ -10,6 +10,10 @@
 		8F7713041C899E3400B6B218 /* Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F7713031C899E3400B6B218 /* Compare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F77130B1C899E3400B6B218 /* Compare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7713001C899E3400B6B218 /* Compare.framework */; };
 		8F7713101C899E3400B6B218 /* CompareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77130F1C899E3400B6B218 /* CompareTests.swift */; };
+		8F77131E1C899E4400B6B218 /* OptionalEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77131A1C899E4400B6B218 /* OptionalEquatable.swift */; };
+		8F77131F1C899E4400B6B218 /* OptionalComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77131B1C899E4400B6B218 /* OptionalComparable.swift */; };
+		8F7713201C899E4400B6B218 /* ConditionalAssign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77131C1C899E4400B6B218 /* ConditionalAssign.swift */; };
+		8F7713211C899E4400B6B218 /* Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77131D1C899E4400B6B218 /* Compare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		8F77130A1C899E3400B6B218 /* CompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F77130F1C899E3400B6B218 /* CompareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTests.swift; sourceTree = "<group>"; };
 		8F7713111C899E3400B6B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F77131A1C899E4400B6B218 /* OptionalEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalEquatable.swift; sourceTree = "<group>"; };
+		8F77131B1C899E4400B6B218 /* OptionalComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalComparable.swift; sourceTree = "<group>"; };
+		8F77131C1C899E4400B6B218 /* ConditionalAssign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalAssign.swift; sourceTree = "<group>"; };
+		8F77131D1C899E4400B6B218 /* Compare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 		8F7713021C899E3400B6B218 /* Compare */ = {
 			isa = PBXGroup;
 			children = (
+				8F77131A1C899E4400B6B218 /* OptionalEquatable.swift */,
+				8F77131B1C899E4400B6B218 /* OptionalComparable.swift */,
+				8F77131C1C899E4400B6B218 /* ConditionalAssign.swift */,
+				8F77131D1C899E4400B6B218 /* Compare.swift */,
 				8F7713031C899E3400B6B218 /* Compare.h */,
 				8F7713051C899E3400B6B218 /* Info.plist */,
 			);
@@ -194,6 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F77131E1C899E4400B6B218 /* OptionalEquatable.swift in Sources */,
+				8F7713201C899E4400B6B218 /* ConditionalAssign.swift in Sources */,
+				8F77131F1C899E4400B6B218 /* OptionalComparable.swift in Sources */,
+				8F7713211C899E4400B6B218 /* Compare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +324,7 @@
 		8F7713151C899E3400B6B218 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +335,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.silverback-it.Compare";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8F7713161C899E3400B6B218 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
